@@ -1,0 +1,37 @@
+.profile-card {
+    width: 250px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(24, 53, 149, 0.2);
+    text-align: center;
+    background-color: cadetblue;
+    font-family: "Times New Roman", sans-serif;
+    margin: 100px auto;
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #ffffff;
+}
+
+.profile-card h2 {
+    margin: 10px 0;
+    font-size: 1.7em;
+}
+
+.profile-card p {
+    margin: 6px 0;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.profile-card strong {
+    font-weight: bold;
+}
+
