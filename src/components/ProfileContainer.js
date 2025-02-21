@@ -3,32 +3,43 @@ import ProfileCard from "./ProfileCard";
 import profilePic from "../assets/profile-pic.jpeg";
 
 const ProfileContainer = () => {
-  const employees = [
-    {
-      id: 1,
-      name: "Anchita Shukla",
-      title: "Software Engineer",
-      department: "Technology",
-      email: "anchita14@gmail.com",
-      image: profilePic
-    },
-    {
-      id: 2,
-      name: "Anchita Shukla",
-      title: "Data Scientist",
-      department: "Technology",
-      email: "anchita14@gmail.com",
-      image: profilePic
-    },
-    {
-      id: 3,
-      name: "Anchita Shukla",
-      title: "Product Manager",
-      department: "Technology",
-      email: "anchita14@gmail.com",
-      image: profilePic
-    }
-  ];
+  const employees = [{
+    name: "Anchita Shukla",
+    title: "Software Engineer",
+    department: "Engineering",
+    email: "anchita14@gmail.com",
+    image: profilePic
+  }, {
+    name: "Anchita Shukla",
+    title: "Data Scientist",
+    department: "Technology",
+    email: "anchita2003@gmail.com",
+    image: profilePic
+  }, {
+    name: "Anchita Shukla",
+    title: "Product Manager",
+    department: "Technology",
+    email: "anchita.shukla@gmail.com",
+    image: profilePic
+  }, {
+    name: "Anchita Shukla",
+    title: "Business Analyst",
+    department: "Business",
+    email: "anchita@gmail.com",
+    image: profilePic
+  }, {
+    name: "Anchita Shukla",
+    title: "Data Analyst",
+    department: "Technology",
+    email: "anchita_s@gmail.com",
+    image: profilePic
+  }, {
+    name: "Anchita Shukla",
+    title: "Financial Analyst",
+    department: "Finance",
+    email: "anchita03@gmail.com",
+    image: profilePic
+  }];
 
   const [currIndex, setCurrIndex] = useState(0);
 
@@ -40,25 +51,19 @@ const ProfileContainer = () => {
     setCurrIndex((currIndex - 1 + employees.length) % employees.length);
   }
 
-  return (
-      <div className="profile-container">
-        <h2>Employee Profiles</h2>
-
-        <div className="profile-wrapper">
-          <ProfileCard
-              name={employees[currIndex].name}
-              title={employees[currIndex].title}
-              department={employees[currIndex].department}
-              email={employees[currIndex].email}
-              image={employees[currIndex].image}
-          />
-          <div className="button-container">
-            <button onClick={prevEmployee}>Previous Employee</button>
-            <button onClick={nextEmployee}>Next Employee</button>
-          </div>
-        </div>
-      </div>
-  );
+  return (<div className="profile-container">
+    <ProfileCard
+        name={employees[currIndex].name}
+        title={employees[currIndex].title}
+        department={employees[currIndex].department}
+        email={employees[currIndex].email}
+        image={employees[currIndex].image}
+    />
+    <div className="button-container">
+      <button onClick={prevEmployee}>Previous Employee</button>
+      <button onClick={nextEmployee}>Next Employee</button>
+    </div>
+  </div>);
 
 };
 
