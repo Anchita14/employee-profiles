@@ -50,7 +50,7 @@ const ProfileContainer = () => {
     }
   ];
 
-  const [viewMode, setViewMode] = useState("scroll");
+  const [viewMode, setViewMode] = useState("list");
   const [currIndex, setCurrIndex] = useState(0);
 
   const showScrollView = () => setViewMode("scroll");
@@ -63,8 +63,12 @@ const ProfileContainer = () => {
       <div className="profile-container">
 
         <div className="view-toggle">
-          <button onClick={showScrollView} className={viewMode === "scroll" ? "active" : ""}>Scroll View</button>
-          <button onClick={showListView} className={viewMode === "list" ? "active" : ""}>List View</button>
+          <button onClick={showScrollView} className={viewMode === "scroll" ? "active" : ""}>
+            Scroll View
+          </button>
+          <button onClick={showListView} className={viewMode === "list" ? "active" : ""}>
+            List View
+          </button>
         </div>
 
         {viewMode === "scroll" && (
